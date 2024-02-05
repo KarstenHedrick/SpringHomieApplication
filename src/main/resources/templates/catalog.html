@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layouts/defaultTemplate">
+
+<head>
+
+	<style>
+		table,
+		th,
+		td {
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: normal;
+			padding: 10px;
+			border: 1px solid black;
+			min-width: 50%;
+			max-width: 50%;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+			padding: 2px;
+			margin: 10px;
+		}
+		
+		th {
+			background-color: #37E6E6;
+			color: white;
+			font-family: Impact;
+		}
+		
+		table {
+			width: 100%;
+		}
+
+		.deletebtn {
+			background-color: #FF4646;
+		}
+		
+		.btn-primary {
+			background-color:#37E6E6;
+		}
+	</style>
+
+</head>
+
+<!-- Display each listing in a table of content -->
+<body>
+	<section layout:fragment="content">
+		<h1 th:text="${title}"></h1>
+		<table th:each="listing : ${listings}">
+			<tr>
+				<th>Address</th>
+				<th>Price</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td th:text="${listing.address}"></td>
+				<td th:text="${listing.price}"></td>
+				<td th:text="${listing.description}"></td>
+			</tr>
+			
+		</table>
+		
+	</section>
+</body>
+
+</html>

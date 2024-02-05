@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layouts/defaultTemplate">
+
+<body>
+	<div layout:fragment="content">
+		<form action="#" th:action="@{doLogin}" th:object="${loginModel}" method="post">
+
+			<!-- Home Picture -->
+			<div class="imgcontainer">
+				<img th:src="@{/img/LoginHome.png}" alt="HomePic" class="avatar" />
+			</div>
+
+			<div class="container">
+				<!-- Username Label & Username Input -->
+				<label for="uname"><b>Username</b></label>
+				<input type="text" th:field="*{username}" placeholder="Enter username" name="uname" required>
+
+				<!-- Password Label & Password Input -->
+				<label for="psw"><b>Password</b></label>
+				<input type="password" th:field="*{password}" placeholder="Enter password" name="psw" required>
+
+				<button type="submit">Login</button>
+			</div>
+			
+			<div class="container">
+				<!-- Register -->
+				<h1>Dont have an account?</h1>
+				
+				<a th:href="@{/register/}" class="addbtn" role="button">Click to Register</a>
+			</div>
+
+		</form>
+	</div>
+</body>
+
+</html>

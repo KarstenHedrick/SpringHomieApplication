@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layouts/defaultTemplate">
+
+<head>
+	<style>
+		p {
+			font-family: 'Times New Roman', Times, serif;
+			font-weight: normal;
+			font-size: 25px;
+			color: white;
+		}
+		.container 
+		{
+			margin-top: 10px;
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-bottom: 10px;
+			width: 100%;
+			background-color: #37E6E6;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+		}
+		.container-fluid {
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<div layout:fragment="content">
+		<form>
+			<!-- Home Picture -->
+			<div class="imgcontainer">
+				<img th:src="@{/img/HomeBanner.png}" id="homepic" alt="HomePic" class="avatar" />
+			</div>
+
+			<h1> Welcome to Homie! </h1>
+
+			<div class="container">
+				<p>
+					Homie is a new way to view and imagine your dream homes. <br>
+					The homes listed within this website display some of the <br>
+					finest and most beautiful homes money can buy. Browse through <br>
+					our catelog of listings, and you have the oppurtunity to list <br>
+					some of your own properties yourself! Displaying and viewing <br>
+					homes is made simple with Homie.
+				</p>
+			</div>
+
+		</form>
+	</div>
+</body>

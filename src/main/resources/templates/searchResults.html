@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layouts/defaultTemplate">
+
+<head>
+
+	<style>
+		table,
+		th,
+		td {
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: normal;
+			padding: 10px;
+			border: 1px solid black;
+			min-width: 130px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+			padding: 2px;
+			margin: 10px;
+		}
+		
+		th {
+			background-color: #37E6E6;
+			color: white;
+			font-family: Impact;
+		}
+		
+		table {
+			width: 100%;
+		}
+
+		.deletebtn {
+			background-color: #FF4646;
+		}
+		
+		.btn-primary {
+			background-color:#37E6E6;
+		}
+	</style>
+
+</head>
+
+<!-- Display each listing in a table of content -->
+<body>
+	<section layout:fragment="content">
+		<h1 th:text="${title}"></h1>
+		<table th:each="result : ${results}">
+			<tr>
+				<th>ID</th>
+				<th>Location</th>
+				<th>Address</th>
+				<th>Price</th>
+				<th>Bedrooms</th>
+				<th>Square Feet</th>
+				<th>Bathrooms</th>
+				<th>Floors</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td th:text="${result.id}"></td>
+				<td th:text="${result.location}"></td>
+				<td th:text="${result.address}"></td>
+				<td th:text="${result.price}"></td>
+				<td th:text="${result.bedrooms}"></td>
+				<td th:text="${result.squareFeet}"></td>
+				<td th:text="${result.bathrooms}"></td>
+				<td th:text="${result.floors}"></td>
+				<td th:text="${result.description}"></td>
+			</tr>
+		</table>
+		
+		<div class="container">
+			<a th:href="@{/listings/}" class="btn btn-primary" role="button">Continue</a>
+		</div>
+		
+	</section>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+body {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+form {
+	border: 2px solid #ccc;
+}
+
+input[type=text],
+input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+
+button {
+	background-color: #37E6E6;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	border-radius: 3px;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+.cancelbtn {
+	width: auto;
+	float: left;
+	padding: 10px 18px;
+	background-color: #37E6E6;
+	color: #FFF;
+}
+
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+
+img.avatar {
+	width: 50%;
+	max-width: 350px;
+	border-radius: 50%;
+}
+
+.container {
+	padding: 10px;
+
+}
+
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+.fieldError {
+	color: red;
+}

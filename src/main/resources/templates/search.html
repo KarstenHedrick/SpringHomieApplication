@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layouts/defaultTemplate">
+
+<body>
+	<div layout:fragment="content">
+		<h1 th:text="${title}"></h1>
+		
+		<form action="#" th:action="@{/listings/searchResults}" th:object="${searchListingModel}" method="post">
+
+			<div class="container">
+				<!-- Username Label & Username Input -->
+				<label for="uname"><b>Enter Location</b></label>
+				<input type="text" placeholder="Enter location" name="location" th:field="*{searchTerm}") required>
+
+				<button type="submit">Search</button>
+			</div>
+
+		</form>
+	</div>
+</body>
+
+</html>

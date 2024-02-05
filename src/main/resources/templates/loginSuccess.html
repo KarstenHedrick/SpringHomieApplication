@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+	layout:decorate="layouts/defaultTemplate">
+
+<head>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+	<div layout:fragment="content">
+	<h1>Login Success!</h1>
+	<p th:text="${loginModel.username}"> Welcome, </p>
+	</div>
+</body>
+
+</html>

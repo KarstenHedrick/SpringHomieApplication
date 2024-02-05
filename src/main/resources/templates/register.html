@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layouts/defaultTemplate">
+
+<head>
+	<style>
+		.cancelbutton {
+			font: bold 11px Arial;
+			text-decoration: none;
+			background-color: #EEEEEE;
+			color: #333333;
+			padding: 2px 6px 2px 6px;
+			border-top: 1px solid #CCCCCC;
+			border-right: 1px solid #333333;
+			border-bottom: 1px solid #333333;
+			border-left: 1px solid #CCCCCC;
+		}
+	</style>
+</head>
+
+<body>
+	<div layout:fragment="content">
+		<form action="#" th:action="@{doRegister}" th:object="${loginModel}" method="post">
+			<!-- Background Banner -->
+			<div class="imgcontainer">
+				<img th:src="@{/img/HomeBanner.png}" alt="Avatar" class="avatar" />
+			</div>
+			<div class="container">
+				<!-- Username Label & Username Input -->
+				<label for="uname"><b>Username</b></label>
+				<input type="text" th:field="*{username}" placeholder="Enter Username" name="username" required>
+				<!-- Password Label & Password Input -->
+				<label for="psw"><b>Password</b></label>
+				<input type="password" th:field="*{password}" placeholder="Enter Username" name="psw" required>
+				<button type="submit">Create Account
+				</button>
+			</div>
+
+			<div class="container">
+				<a th:href="@{/login/}" class="cancelbtn" role="button">Cancel</a>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

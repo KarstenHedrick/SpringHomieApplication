@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layouts/defaultTemplate">
+
+<head>
+
+	<style>
+		h3 {
+			color: green;
+		}
+
+		a {
+			color: green;
+		}
+
+		b {
+			color: white;
+			font-weight: normal;
+		}
+
+		.btn-primary {
+			background-color: #37E6E6;
+		}
+	</style>
+
+</head>
+
+<!-- Display each listing in a table of content -->
+
+<body>
+	<section layout:fragment="content">
+		<h1 th:text="${title}"></h1>
+
+		<div class="container">
+			<b>
+				<h3>
+					The Listing was successfully added! <br>
+				</h3>
+
+				Home ID is <a th:text="${listing.id}" /> <br>
+				Home Location is <a th:text="${listing.location}" /> <br>
+				Home Address is <a th:text="${listing.address}" /> <br>
+				Price of the Home is <a th:text="${listing.price}" /> <br>
+				There are <a th:text="${listing.bedrooms}" /> Bedrooms <br>
+				There is <a th:text="${listing.squareFeet}" /> Square Feet<br>
+				There are <a th:text="${listing.bathrooms}" /> Bathrooms <br>
+				There are <a th:text="${listing.floors}" /> Floors <br>
+				Description is: <a th:text="${listing.description}" /> <br>
+			</b>
+
+			<a th:href="@{/listings/}" class="btn btn-primary" role="button">Continue</a>
+		</div>
+
+	</section>
+</body>
+
+</html>
