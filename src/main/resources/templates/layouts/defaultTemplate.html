@@ -110,7 +110,7 @@
 
 <body>
 	<div align="center">
-		<div th:replace="layouts/commonHeader :: header">My Header</div>
+		<div th:replace="~{layouts/commonHeader :: header}">My Header</div>
 
 		<section layout:fragment="content">
 			<!-- This is where content is displayed in the page\
@@ -118,7 +118,7 @@
 			<p>My Body Contents</p>
 		</section>
 
-		<div class="footer-section" th:replace="layouts/commonFooter :: footer">My Footer</div>
+		<div class="footer-section" th:replace="~{layouts/commonFooter :: footer}">My Footer</div>
 	</div>
 </body>
 
